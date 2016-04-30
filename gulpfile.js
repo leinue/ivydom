@@ -50,13 +50,19 @@ gulp.task('clean', function(cb) {
 
 });
 
+gulp.task('auto', function () {
+    // 监听文件修改，当文件被修改则执行 script 任务
+    gulp.watch('src/js/*.js', ['js']);
+})
+
+
 gulp.task('build', ['clean', 'css', 'js', 'images'], function() {
 
     gulp.start('css', 'js', 'images');
 
 });
 
-gulp.task('default', ['clean', 'css', 'js', 'images'], function() {
+gulp.task('default', ['clean', 'css', 'js', 'images', 'auto'], function() {
 
     gulp.start('css', 'js', 'images');
 
