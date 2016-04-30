@@ -10,14 +10,23 @@ var gulp = require('gulp'),
 
     del = require('del');
 
-gulp.task('css', function() {
+var htmlmin = require('gulp-htmlmin');
 
-    return gulp.src('src/css/*.css')      //压缩的文件
+gulp.task('html', function() {
+  return gulp.src('./src/index.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'))
+});
 
-        .pipe(gulp.dest('build/css'))   //输出文件夹
+gulp.task('css', function () {
+    var cssSrc = './src/css/*.css',
+        cssDst = './build/css';
 
-        .pipe(minifycss());   //执行压缩
-
+    gulp.src(cssSrc)
+        .pipe(gulp.dest(cssDst))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(minifycss())
+        .pipe(gulp.dest(cssDst));
 });
 
 gulp.task('js', function() {
@@ -56,13 +65,13 @@ gulp.task('auto', function () {
 })
 
 
-gulp.task('build', ['clean', 'css', 'js', 'images'], function() {
+gulp.task('build', ['clean', 'css', 'js', 'images', 'html'], function() {
 
     gulp.start('css', 'js', 'images');
 
 });
 
-gulp.task('default', ['clean', 'css', 'js', 'images', 'auto'], function() {
+gulp.task('default', ['clean', 'css', 'js', 'images', 'html', 'auto'], function() {
 
     gulp.start('css', 'js', 'images');
 

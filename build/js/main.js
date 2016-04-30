@@ -302,7 +302,7 @@ $(function(){
 		var _this = $(this);
 		var _thisImg = _this.find('img');
 		var hoverSrc = _thisImg.attr('data-hover');
-		_thisImg.attr('src', 'build/imgs/' + hoverSrc + '.svg');
+		_thisImg.attr('src', 'imgs/' + hoverSrc + '.svg');
 		_thisImg.css({opacity: 1});
 
 		if(_this.attr('id') == 'weixin') {
@@ -315,7 +315,7 @@ $(function(){
 		var _this = $(this);
 		var _thisImg = _this.find('img');
 		var normalSrc = _thisImg.attr('data-normal');
-		_thisImg.attr('src', 'build/imgs/' + normalSrc + '.svg');
+		_thisImg.attr('src', 'imgs/' + normalSrc + '.svg');
 		_thisImg.css({opacity: 0.5});
 
 		if(_this.attr('id') == 'weixin') {
