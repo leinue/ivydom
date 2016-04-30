@@ -23,7 +23,7 @@ var browser={
 if(browser.versions.mobile){
 	if(!browser.versions.is360){
 		if(!browser.versions.isEdge) {
-			window.location.href = 'http://ivydom.com/mobile';
+			// window.location.href = 'http://ivydom.com/mobile';
 		}
 	}
 }
@@ -61,10 +61,13 @@ $(function(){
 		var currentQuote = 'quote1';
 		var nextQuote = 'quote2';
 
+		var mainQuoteAllTop = ((docHeight - mainQuoteAllHeight) / 2);
+		mainQuoteAllTop = $(document).width() <= 320 ? mainQuoteAllTop - 100 : mainQuoteAllTop;
+
 		var fixQuotePosition = function() {
 			mainQuoteAll.css({
 				left: ((docWidth - mainQuoteAllWidth) / 2),
-				top: ((docHeight - mainQuoteAllHeight) / 2),
+				top: mainQuoteAllTop,
 				display: 'block'
 			});
 		}
@@ -218,7 +221,7 @@ $(function(){
 		var thisTab = $('#main-' + id);
 
 		thisTab.addClass('active');//标记当前tab为活跃页
-		thisTab.css({display: 'block',opacity: 1,'z-index': '65535'});//重新确认不隐藏,防止冲突
+		thisTab.css({display: 'block',opacity: 1,'z-index': '60000'});//重新确认不隐藏,防止冲突
 
 		tabActive.removeClass('active');//去掉当前活跃页活跃标记
 		tabActive.css({opacity: '0','z-index': '-1'});//将活跃tab置不可视

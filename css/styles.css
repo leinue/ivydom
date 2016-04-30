@@ -57,7 +57,7 @@ a:hover {
 	display: flex;
 	-webkit-flex-direction: column;
 	flex-direction: column;
-	z-index: 65535;
+	z-index: 65500;
 	background: rgb(255, 255, 255);
 }
 
@@ -91,6 +91,7 @@ a:hover {
 	bottom: -60px;
 	right: 20px;
 	opacity: 0;
+	z-index: 65535;
 }
 
 footer {
@@ -98,7 +99,6 @@ footer {
 	transform: matrix(1, 0, 0, 1, 0, -80);
 	letter-spacing: 2.5px;
 	width: 720px;
-	z-index: 4;
 	color: #838A96;
 	font-size: 10px;
 	text-align: center;
@@ -388,4 +388,85 @@ footer {
 	position: absolute;
 	background-image: url("../imgs/tickOut.png");
 	/*opacity: 0;*/
+}
+
+@media screen and (max-width: 414px) {
+
+	.main-quote {
+		font-size: 16px;
+	}
+
+	div#quote1 {
+		/*padding-left: 90px;*/
+	}
+
+	.article-tab {
+		left: 28.694158%!important;
+	}
+
+	#main-quote-all {
+		left: 34.694158%!important;
+	}
+
+	.sub-title-header h2 {
+		font-size: 1.3em;
+	}
+
+	.products-item {
+		width: 100%;
+		float: left;
+	}
+
+	.footer-container {
+		left: 120px;
+	}
+
+	footer {
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 414px) {
+
+	.article-tab {
+		left: 30.694158%!important;
+	}	
+
+	.works-full {
+		margin-right: 15px;
+	}
+
+	.footer-side ul li:nth-child(4) {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 320px) {
+
+	.article-tab {
+		left: 34.694158%!important;
+	}	
+
+	.works-full {
+		margin-right: 15px;
+	}
+
+	.footer-side ul li:nth-child(5) {
+		display: none;
+	}
+
+	.footer-side ul li {
+		padding: 4px;
+	}
+
+	.main-quote {
+		font-size: 14px;
+	}
+
+	.sub-title-header h2 {
+		font-size: 1.1em;
+	}
+
 }
