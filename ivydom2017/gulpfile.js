@@ -3,14 +3,23 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
-    del = require('del');
+    del = require('del'),
+    connect = require('gulp-connect');
 
 var htmlmin = require('gulp-htmlmin');
+
+gulp.task('connect', function() {
+  connect.server({
+    root: 'src',
+    livereload: true
+  });
+});
 
 gulp.task('html', function() {
   return gulp.src('./src/index.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'))
+    .pipe(connect.reload()); //输出
 });
 
 gulp.task('css', function () {
@@ -21,7 +30,8 @@ gulp.task('css', function () {
         .pipe(gulp.dest(cssDst))
         .pipe(rename({ suffix: '.min' }))
         .pipe(minifycss())
-        .pipe(gulp.dest(cssDst));
+        .pipe(gulp.dest(cssDst))
+        .pipe(connect.reload()); //输出
 });
 
 gulp.task('js', function() {
@@ -30,12 +40,14 @@ gulp.task('js', function() {
         .pipe(gulp.dest('build/js'))    //输出main.js到文件夹
         .pipe(rename({suffix: '.min'}))   //rename压缩后的文件名
         .pipe(uglify())    //压缩
-        .pipe(gulp.dest('build/js'));  //输出
+        .pipe(gulp.dest('build/js'))
+        .pipe(connect.reload());;  //输出
 });
 
 gulp.task('images', function() {
     return gulp.src('src/imgs/*')
-        .pipe(gulp.dest('build/imgs'));  //输出
+        .pipe(gulp.dest('build/imgs'))
+        .pipe(connect.reload()); //输出
 });
 
 gulp.task('clean', function(cb) {
@@ -47,13 +59,16 @@ gulp.task('auto', function () {
     gulp.watch('src/js/*.js', ['js']);
 })
 
+gulp.task('watch', function () {
+    gulp.watch(['src/*.html', 'src/js/*.js', 'src/css/*.css', 'src/imgs/*'], ['html', 'js', 'css', 'images']);
+})
 
 gulp.task('build', ['clean', 'css', 'js', 'images', 'html'], function() {
     gulp.start('css', 'js', 'images');
 });
 
 gulp.task('default', ['clean', 'css', 'js', 'images', 'html', 'auto'], function() {
-
     gulp.start('css', 'js', 'images');
-
 });
+
+gulp.task('serve', ['connect', 'watch']);

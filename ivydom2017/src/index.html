@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="Description" content="ivydom,原我的成长能为这个世界带来惊喜,解放开发者生产力">
+  <meta name="keywords" content="ivydom,计算机编程,人工智能,tidy.css,MongoBro,HoCG,直呼日报" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ivydom</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+  <div class="header-bio to-animate fadeInUp animated">
+      Developer && Designer<br>
+      <div class="header-bio-subtitle to-animate fadeInUp animated">自由软件解放开发者生产力</div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="bio-photo to-animate fadeInUp animated">
+    <img src="imgs/logo.png" width="60" height="60">
+    <a href="index.html">ivydom</a>
+  </div>
+
+  <div class="bio-main">
+    <div class="bio-menu">
+      <ul>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#introduction">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="worksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">My Works</h4>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="full-text works-full">
+            <div class="products-container to-animate fadeInUp animated">
+              <div class="products-item">
+                <div class="main-prod-text">
+                  Tidy.CSS
+                  <br>
+                  一款简洁高效的响应式CSS3框架
+                </div>
+                <div href="http://tidy.ivydom.com" class="main-prod-icon to-animate fadeInUp animated">
+                  Go
+                </div>
+              </div>
+
+              <div class="products-item">
+                <div class="main-prod-text">
+                  Poimoe
+                  <br>
+                  多人在线协同绘画，获得腾讯创新创业大赛银创奖
+                </div>
+                <div href="http://poimoe.com" class="main-prod-icon to-animate fadeInUp animated">
+                  Go
+                </div>
+              </div>
+
+              <div class="products-item">
+                <div class="main-prod-text">
+                  人工智能实验基地
+                  <br>
+                  2011年15岁的我的奇思妙想
+                </div>
+                <div href="http://ai.ivydom.com" class="main-prod-icon to-animate fadeInUp animated">
+                  Go
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="full-text works-full to-animate fadeInUp animated">
+            <div class="products-container">
+              <div class="products-item">
+                <div class="main-prod-text">
+                  HoCG
+                  <br>
+                  个人绘画记录网站,我使用SAI+vikko进行板绘
+                </div>
+                <div href="http://hocg.ivydom.com" class="main-prod-icon to-animate fadeInUp animated">
+                  Go
+                </div>
+              </div>
+              <div class="products-item">
+                <div class="main-prod-text">
+                  直呼日报
+                  <br>
+                  专门抓取每日的知乎日报数据的爬虫程序
+                </div>
+                <div href="http://daily.ivydom.com" class="main-prod-icon to-animate fadeInUp animated">
+                  Go
+                </div>
+              </div>
+              <div class="products-item">
+                <div class="main-prod-text">
+                  HTML5在线流程图工具
+                </div>
+                <div href="http://ivydom.com/flowchart/" class="main-prod-icon to-animate fadeInUp animated">
+                  Go
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="full-text works-full to-animate fadeInUp animated">
+            <div class="products-item">
+              <div class="main-prod-text">
+                MongoBro
+                <br>
+                一款运行在浏览器中的小型数据库系统
+              </div>
+              <div href="http://mb.ivydom.com" class="main-prod-icon to-animate fadeInUp animated">
+                Go
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="main-prod-text">
+                Dodora 龙猫科技
+                <br>
+                一家建立在技术工程之上的公司
+              </div>
+              <div href="http://mb.ivydom.com" class="main-prod-icon to-animate fadeInUp animated">
+                Go
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="main-prod-text">
+                Gospel
+                <br>
+                Web在线可视化集成编程环境
+              </div>
+              <div href="http://mb.ivydom.com" class="main-prod-icon to-animate fadeInUp animated">
+                Go
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">返回（ESC）</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="introModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+          <h4 class="modal-title" id="myModalLabel">About Me</h4>
+        </div>
+        <div class="modal-body">
+          <div class="fh5co-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12 section-heading">
+                  <div class="photo-bioa">
+                    <img class="img-circle" width="100" height="100" src="imgs/ivy.jpg">
+                    <h2>ivy, 谢扬, CEO at dodora.cn Inc.</h2>                    
+                    <a href="#" id="contactMe">和我取得联系</a>
+                  </div>
+                </div>
+                  <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="row">
+                      <div class="col-md-12">
+                      <p>你好，我是<strong>谢扬（ivy）</strong>。目前就读于<a href="http://www.ncu.edu.cn/">南昌大学</a>，同时是 <a href="http://dodora.cn">龙猫科技</a>的CEO。很高兴你对我网站的访问。我从13岁开始学习计算机技术，至今编程时间已有7年。</p>
+                      <p>我在做一款基于Web的可视化全栈式开发环境<a href="http://gospely.com">Gospel</a>。<strong>Gospel</strong>取自圣经，是福音的意思，我们希望解放开发者生产力，带给开发者福音。</p>
+                      <br>
+                      <p>我目前主要使用JavaScript编写应用。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">返回（ESC）</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="contactModalLabel">Contace Me</h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="fh5co-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12 section-heading">
+                  <div class="photo-bioa">
+                    <img class="img-circle" width="100" height="100" src="imgs/ivy.jpg">
+                    <h2>ivy, 谢扬, 曾经的网瘾少年</h2>                    
+                    <a href="#" id="aboutMe">关于我</a>
+                  </div>
+                </div>
+                  <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <ul>
+                          <li><a href="https://github.com/leinue" target="__blank">Github</a></li>
+                          <li><a href="https://www.zhihu.com/people/honcut" target="__blank">知乎</a></li>
+                          <li><a href="http://weibo.com/ivydom" target="__blank">新浪微博</a></li>
+                          <li><a href="http://t.qq.com/IvyStk" target="__blank">腾讯微博</a></li>
+                          <li><a href="http://shang.qq.com/email/stop/email_stop.html?qq=597055914&sig=987922fd5e048f8053e01b5e35378e885bc37f3524950621&tttt=1" target="__blank">QQ</a></li>
+                          <li><a href="" target="__blank">微信</a></li>
+                          <li><a href="https://www.linkedin.com/in/ivydom" target="__blank">领英</a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">返回（ESC）</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="blogModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="contactModalLabel">Blog</h4>
+        </div>
+        <div class="modal-body" style="padding: 0px">
+          <iframe sameless width="100%" style="border:0px" height="100%" src="http://me.ivydom.com"></iframe>
+        </div>
+        <div class="modal-footer">
+          <a href="http://me.ivydom.com" target="__blank" class="btn btn-default">新窗口打开</a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">返回（ESC）</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
