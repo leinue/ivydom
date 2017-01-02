@@ -7,10 +7,12 @@ var gulp = require('gulp'),
     connect = require('gulp-connect');
 
 var htmlmin = require('gulp-htmlmin');
+var revCollector = require('gulp-rev-collector');
+var rev = require('gulp-rev');
 
 gulp.task('connect', function() {
   connect.server({
-    root: 'src',
+    root: 'build',
     livereload: true
   });
 });
@@ -35,11 +37,11 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function() {
-    return gulp.src('src/js/*.js')
-        .pipe(concat('main.js'))    //合并所有js到main.js
-        .pipe(gulp.dest('build/js'))    //输出main.js到文件夹
-        .pipe(rename({suffix: '.min'}))   //rename压缩后的文件名
-        .pipe(uglify())    //压缩
+    return gulp.src(['src/js/jquery.js', 'src/js/bootstrap.js', 'src/js/index.js'])
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('build/js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
         .pipe(gulp.dest('build/js'))
         .pipe(connect.reload());;  //输出
 });

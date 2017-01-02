@@ -189,6 +189,15 @@ $(function() {
       }
     });
 
+    $('.contact-list li a').click(function() {
+      if($(this).attr('id') == 'wechat') {
+        $('#wechatqrcode').hide();
+        setTimeout(function() {
+          $('#wechatqrcode').show();
+        }, 100);
+        return false;
+      }
+    });
 
   })();
 

@@ -15,7 +15,8 @@
     "gulp-uglify": "^1.5.3"
   },
   "devDependencies": {
-    "gulp-connect": "^5.0.0"
+    "gulp-connect": "^5.0.0",
+    "gulp-rev": "^7.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

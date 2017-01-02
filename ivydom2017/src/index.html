@@ -6,9 +6,9 @@
   <meta name="keywords" content="ivydom,计算机编程,人工智能,tidy.css,MongoBro,HoCG,直呼日报" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ivydom</title>
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
 </head>
 <body>
 
@@ -35,7 +35,6 @@
     </div>
   </div>
 
-  <!-- Modal -->
   <div class="modal fade" id="worksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -44,7 +43,6 @@
           <h4 class="modal-title" id="myModalLabel">My Works</h4>
         </div>
         <div class="modal-body">
-
 
           <div class="full-text works-full">
             <div class="products-container to-animate fadeInUp animated">
@@ -160,7 +158,6 @@
     </div>
   </div>
 
-  <!-- Modal -->
   <div class="modal fade" id="introModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -200,7 +197,6 @@
     </div>
   </div>
 
-  <!-- Modal -->
   <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -222,17 +218,20 @@
                 </div>
                   <div class="col-md-8 col-sm-8 col-xs-12">
                     <div class="row">
-                      <div class="col-md-12">
-                        <ul>
+                      <div class="col-md-8">
+                        <ul class="contact-list">
                           <li><a href="https://github.com/leinue" target="__blank">Github</a></li>
                           <li><a href="https://www.zhihu.com/people/honcut" target="__blank">知乎</a></li>
                           <li><a href="http://weibo.com/ivydom" target="__blank">新浪微博</a></li>
                           <li><a href="http://t.qq.com/IvyStk" target="__blank">腾讯微博</a></li>
                           <li><a href="http://shang.qq.com/email/stop/email_stop.html?qq=597055914&sig=987922fd5e048f8053e01b5e35378e885bc37f3524950621&tttt=1" target="__blank">QQ</a></li>
-                          <li><a href="" target="__blank">微信</a></li>
+                          <li><a id="wechat" href="" target="__blank">微信</a></li>
                           <li><a href="https://www.linkedin.com/in/ivydom" target="__blank">领英</a></li>
                         </ul>
-                    </div>
+                      </div>
+                      <div class="col-md-4">
+                        <img src="imgs/wechat.jpg" id="wechatqrcode" class="to-animate bounceIn animated" width="264" height="386">
+                      </div>
                   </div>
                 </div>
               </div>
@@ -247,7 +246,6 @@
     </div>
   </div>
 
-  <!-- Modal -->
   <div class="modal fade" id="blogModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -259,15 +257,13 @@
           <iframe sameless width="100%" style="border:0px" height="100%" src="http://me.ivydom.com"></iframe>
         </div>
         <div class="modal-footer">
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_4644453'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/stat.php%3Fid%3D4644453%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
           <a href="http://me.ivydom.com" target="__blank" class="btn btn-default">新窗口打开</a>
           <button type="button" class="btn btn-default" data-dismiss="modal">返回（ESC）</button>
         </div>
       </div>
     </div>
   </div>
-
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/main.min.js"></script>
 </body>
 </html>

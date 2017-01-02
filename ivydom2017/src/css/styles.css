@@ -304,3 +304,7 @@ a:hover:after, a:active:after, a:focus:after {
 .main-prod-icon.to-animate {
   transition: all .3s ease 0s;
 }
+
+#cnzz_stat_icon_4644453 {
+  display: none;
+}
