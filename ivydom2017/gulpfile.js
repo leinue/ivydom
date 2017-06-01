@@ -37,7 +37,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function() {
-    return gulp.src(['src/js/jquery.js', 'src/js/bootstrap.js', 'src/js/index.js'])
+    return gulp.src(['src/js/1jquery.js', 'src/js/bootstrap.js', 'src/js/index.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('build/js'))
         .pipe(rename({suffix: '.min'}))
