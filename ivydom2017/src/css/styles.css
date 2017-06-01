@@ -123,6 +123,7 @@ a:hover:after, a:active:after, a:focus:after {
 
 .bio-menu ul {
   margin: 0px;
+  padding: 0px;
 }
 
 .bio-menu ul li {
@@ -321,6 +322,7 @@ a:hover:after, a:active:after, a:focus:after {
 
   .header-bio-subtitle {
     font-size: 20px;
+    margin-top: 20px;
   }
 
 }
@@ -329,4 +331,10 @@ a:hover:after, a:active:after, a:focus:after {
   a {
     font-size: 12px!important;
   }
+
+  .header-bio-subtitle {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
 }
