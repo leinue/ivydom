@@ -325,6 +325,35 @@ a:hover:after, a:active:after, a:focus:after {
     margin-top: 20px;
   }
 
+  #contactMe {
+    margin-bottom: 22px;
+  }
+
+  .main-prod-text {
+    margin-top: 33px;
+  }
+
+  #wechat-wrapper {
+    display: none;
+  }
+
+  #qrcode-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22px;
+  }
+
+  .contact-list {
+    list-style: none;
+    text-align: center;
+    margin-left: -40px;
+  }
+
+  .bio-menu ul li:last-child {
+    margin-right: 0px;
+  }
+
 }
 
 @media (max-width: 320px) {
